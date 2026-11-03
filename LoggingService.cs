@@ -1,10 +1,15 @@
 public class LoggingService
 {
-
-    List<Logging> loggings = new List<Logging> { };
+    LoggingVault vault = new LoggingVault();
+    IReadOnlyList<Logging> loggings;
     const string events = "events.txt";
 
+    public LoggingService()
+    {
+        loggings = vault.GetLoggings();
+    }
     string[] lines = File.ReadAllLines(events);
+
 
     public void test()
     {
@@ -14,7 +19,7 @@ public class LoggingService
 
             if (newLogging != null)
             {
-                loggings.Add(newLogging);
+                vault.Add(newLogging);
             }
         }
 
