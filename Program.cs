@@ -1,24 +1,27 @@
 ﻿
 
+LoggingService loggingService = new LoggingService();
 
-while (true)
-{
-    string? choice = Console.ReadLine();
+loggingService.test();
 
-    switch (choice)
-    {
-        case "1":
+// while (true)
+// {
+//     string? choice = Console.ReadLine();
 
-            break;
-        case "2":
+//     switch (choice)
+//     {
+//         case "1":
 
-            break;
-        case "3":
+//             break;
+//         case "2":
 
-            break;
-        case "4":
+//             break;
+//         case "3":
 
-            break;
-    }
+//             break;
+//         case "4":
 
-}
+//             break;
+//     }
+
+// }
