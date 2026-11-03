@@ -1,0 +1,10 @@
+INFO|Checkout|Application started
+WARNING|Inventory|Only 3 products remaining
+ERROR|Payments|Payment request failed
+INFO|Inventory|Product loaded
+ERROR|Checkout|Unable to complete order
+WARNING|Payments|Payment response was slow
+INFO|Checkout|User opened checkout
+ERROR|Inventory|Product file could not be read
+INFO|Payments|Payment service connected
+WARNING|Checkout|Basket contains no products
