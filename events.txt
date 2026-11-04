@@ -8,3 +8,4 @@ INFO|Checkout|User opened checkout
 ERROR|Inventory|Product file could not be read
 INFO|Payments|Payment service connected
 WARNING|Checkout|Basket contains no products
+Ka|ialle|daga

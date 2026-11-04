@@ -14,7 +14,13 @@ public class LoggingRead
             return null;
         }
 
-        return new Logging(parts[0], parts[1], parts[2]);
+        if ((parts[0] is "INFO" or "WARNING" or "ERROR") &&
+            (parts[1] is "Checkout" or "Payments" or "Inventory"))
+        {
+            return new Logging(parts[0], parts[1], parts[2]);
+        }
+
+        return null;
 
     }
 }
