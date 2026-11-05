@@ -1,7 +1,0 @@
-Log Statistics
----------------
-Total enteries: 10
-INFO enteries: 4
-WARNING enteries: 3
-ERROR enteries: 3
-Contains ERROR enteries: Yes

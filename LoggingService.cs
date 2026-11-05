@@ -120,11 +120,11 @@ public class LoggingService
         {
             "Log Statistics",
             "---------------",
-            $"Total enteries: {total}",
-            $"INFO enteries: {info}",
-            $"WARNING enteries: {warnings}",
-            $"ERROR enteries: {errors}",
-            $"Contains ERROR enteries: {(containsErrors ? "Yes" : "No")}"
+            $"Total entries: {total}",
+            $"INFO entries: {info}",
+            $"WARNING entries: {warnings}",
+            $"ERROR entries: {errors}",
+            $"Contains ERROR entries: {(containsErrors ? "Yes" : "No")}"
         };
 
         LoggingWrite writer = new LoggingWrite();
