@@ -9,3 +9,19 @@ ERROR|Inventory|Product file could not be read
 INFO|Payments|Payment service connected
 WARNING|Checkout|Basket contains no products
 Ka|ialle|daga
+INFO|Checkout|Order summary displayed
+WARNING|Checkout|Session will expire soon
+ERROR|Checkout|Unable to save customer address
+INFO|Payments|Payment authorization started
+WARNING|Payments|Retrying payment request
+ERROR|Payments|Payment authorization was declined
+INFO|Inventory|Stock level updated
+WARNING|Inventory|Product is nearly out of stock
+ERROR|Inventory|Unable to update product quantity
+INFO|Checkout|Order confirmation sent
+INFO|Payments|Refund processed successfully
+WARNING|Payments|Payment service response took longer than expected
+INFO|Inventory|New product added to catalog
+ERROR|Checkout|Order total could not be calculated
+WARNING|Inventory|Stock count does not match expected value
+berre|endå|ei|test|linja
