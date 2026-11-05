@@ -10,7 +10,8 @@ void MainChoice()
     Console.WriteLine("2. Find by level (INFO, WARNING, ERROR).");
     Console.WriteLine("3. Find by source (Checkout, Payments, Inventory).");
     Console.WriteLine("4. Search in message.");
-    Console.WriteLine("5. QUIT.");
+    Console.WriteLine("5. Log Statistics.");
+    Console.WriteLine("6. QUIT.");
 }
 
 void InLevelChoice()
@@ -93,6 +94,11 @@ while (start)
             break;
 
         case "5":
+            loggingService.WriteStatisticsReport();
+            Console.WriteLine("Statistics written to Report.txt");
+            break;
+
+        case "6":
             start = false;
             break;
     }

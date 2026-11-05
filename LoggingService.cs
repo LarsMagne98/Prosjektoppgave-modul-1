@@ -1,3 +1,5 @@
+using System.Diagnostics.Metrics;
+
 public class LoggingService
 {
     LoggingVault vault = new LoggingVault();
@@ -26,7 +28,8 @@ public class LoggingService
 
     public void PrintAllEvents()
     {
-        foreach (var item in copy)
+        List<Logging> sort = copy.OrderBy(log => log.Source).ToList();
+        foreach (var item in sort)
         {
             Console.WriteLine($"{item.Level} | {item.Source} | {item.Message}");
         }
@@ -96,5 +99,38 @@ public class LoggingService
             Console.WriteLine($"{item.Level} | {item.Source} | {item.Message}");
         }
     }
+
+    public int LevelCounter(string level)
+    {
+        int count = copy.Where(log => log.Level == level).Count();
+        return count;
+    }
+
+
+    // Her har jeg fått hjelp av ai til formatering av statestikken.
+    public void WriteStatisticsReport()
+    {
+        int total = copy.Count;
+        int info = LevelCounter("INFO");
+        int warnings = LevelCounter("WARNING");
+        int errors = LevelCounter("ERROR");
+        bool containsErrors = copy.Any(log => log.Level == "ERROR");
+
+        string[] reportLines =
+        {
+            "Log Statistics",
+            "---------------",
+            $"Total enteries: {total}",
+            $"INFO enteries: {info}",
+            $"WARNING enteries: {warnings}",
+            $"ERROR enteries: {errors}",
+            $"Contains ERROR enteries: {(containsErrors ? "Yes" : "No")}"
+        };
+
+        LoggingWrite writer = new LoggingWrite();
+        writer.WriteToFile(reportLines);
+    }
+
+
 
 }
